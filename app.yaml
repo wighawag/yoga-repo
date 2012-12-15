@@ -1,0 +1,13 @@
+application: yoga-repo
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+
+- url: /upload/
+  script: upload.py
+  login: required
+
+- url: /repo/.*
+  script: download.py
